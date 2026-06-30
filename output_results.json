@@ -1,0 +1,458 @@
+{
+  "canonical_profiles": [
+    {
+      "candidate_id": "cand_alicesmi_5xc3hq",
+      "full_name": "Alice Smith",
+      "emails": [
+        "alice.smith@example.com"
+      ],
+      "phones": [
+        "+15550199"
+      ],
+      "location": {
+        "city": "San Francisco",
+        "region": "CA",
+        "country": "US"
+      },
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/alicesmith"
+        },
+        {
+          "type": "portfolio",
+          "url": "https://alice.dev"
+        }
+      ],
+      "headline": "Software Engineer at Google",
+      "years_experience": 0,
+      "skills": [
+        {
+          "name": "JavaScript",
+          "confidence": 0.75,
+          "sources": [
+            "github_profile"
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "confidence": 0.75,
+          "sources": [
+            "github_profile"
+          ]
+        },
+        {
+          "name": "React",
+          "confidence": 0.75,
+          "sources": [
+            "github_profile"
+          ]
+        },
+        {
+          "name": "CSS",
+          "confidence": 0.75,
+          "sources": [
+            "github_profile"
+          ]
+        },
+        {
+          "name": "Shell",
+          "confidence": 0.75,
+          "sources": [
+            "github_profile"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start": null,
+          "end": null,
+          "summary": "Current position from recruiter CSV export."
+        },
+        {
+          "company": "Google",
+          "title": "Frontend Engineer",
+          "start": null,
+          "end": null,
+          "summary": "Frontend Engineer at Google. Passionate about React, CSS, and open-source. Coding in JavaScript and TypeScript."
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "links",
+          "source": "github_profile",
+          "method": "heuristic_extraction"
+        },
+        {
+          "field": "links",
+          "source": "github_profile",
+          "method": "heuristic_extraction"
+        },
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "location",
+          "source": "github_profile",
+          "method": "heuristic_extraction"
+        }
+      ],
+      "overall_confidence": 0.87
+    },
+    {
+      "candidate_id": "cand_bobjones_akaumd",
+      "full_name": "Bob Jones",
+      "emails": [
+        "bob.jones@example.com"
+      ],
+      "phones": [
+        "+15550198111",
+        "+15550198"
+      ],
+      "location": null,
+      "links": [],
+      "headline": "Senior Software Engineer II at Microsoft",
+      "years_experience": 6.9,
+      "skills": [
+        {
+          "name": "React",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        },
+        {
+          "name": "Node.js",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        },
+        {
+          "name": "AWS",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Microsoft",
+          "title": "Senior Software Engineer II",
+          "start": "2022-01",
+          "end": null,
+          "summary": "Led frontend architecture migrations."
+        },
+        {
+          "company": "Amazon",
+          "title": "Software Engineer",
+          "start": "2019-06",
+          "end": "2021-12",
+          "summary": "Worked on AWS DynamoDB console."
+        },
+        {
+          "company": "Microsoft",
+          "title": "Senior Developer",
+          "start": null,
+          "end": null,
+          "summary": "Current position from recruiter CSV export."
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        }
+      ],
+      "overall_confidence": 0.93
+    },
+    {
+      "candidate_id": "cand_janedoee_ir4uuv",
+      "full_name": "Jane Doe",
+      "emails": [
+        "jane.doe@example.com"
+      ],
+      "phones": [
+        "+11234567890",
+        "+12025550143"
+      ],
+      "location": {
+        "city": "Seattle",
+        "region": "WA",
+        "country": "US"
+      },
+      "links": [
+        {
+          "type": "linkedin",
+          "url": "https://linkedin.com/in/janedoe-pm"
+        }
+      ],
+      "headline": "Product Manager at Meta",
+      "years_experience": 0,
+      "skills": [
+        {
+          "name": "JavaScript",
+          "confidence": 0.6,
+          "sources": [
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Python",
+          "confidence": 0.6,
+          "sources": [
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "SQL",
+          "confidence": 0.6,
+          "sources": [
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Product Management",
+          "confidence": 0.6,
+          "sources": [
+            "recruiter_notes"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Meta",
+          "title": "Product Manager",
+          "start": null,
+          "end": null,
+          "summary": "Current position from recruiter CSV export."
+        },
+        {
+          "company": "Meta",
+          "title": "WA\n\nJane is a sharp Product Manager",
+          "start": null,
+          "end": null,
+          "summary": "Current job noted in recruiter notes."
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_notes",
+          "method": "heuristic_extraction"
+        },
+        {
+          "field": "links",
+          "source": "recruiter_notes",
+          "method": "heuristic_extraction"
+        },
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "location",
+          "source": "recruiter_notes",
+          "method": "heuristic_extraction"
+        }
+      ],
+      "overall_confidence": 0.84
+    },
+    {
+      "candidate_id": "cand_charlieb_x03udl",
+      "full_name": "Charlie Brown",
+      "emails": [
+        "charlie.brown@example.com"
+      ],
+      "phones": [
+        "+15559876543"
+      ],
+      "location": null,
+      "links": [],
+      "headline": "Staff Engineer at Netflix",
+      "years_experience": 5.3,
+      "skills": [
+        {
+          "name": "Java",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        },
+        {
+          "name": "Rust",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        },
+        {
+          "name": "Distributed Systems",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        },
+        {
+          "name": "C++",
+          "confidence": 0.95,
+          "sources": [
+            "ats_json"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Netflix",
+          "title": "Staff Engineer",
+          "start": "2021-03",
+          "end": null,
+          "summary": "High performance video rendering engines."
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "direct_mapping"
+        }
+      ],
+      "overall_confidence": 0.93
+    }
+  ],
+  "projected_profiles": [
+    {
+      "full_name": "Alice Smith",
+      "primary_email": "alice.smith@example.com",
+      "phone": "+15550199",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "CSS",
+        "Shell"
+      ],
+      "overall_confidence": 0.87
+    },
+    {
+      "full_name": "Bob Jones",
+      "primary_email": "bob.jones@example.com",
+      "phone": "+15550198111",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "AWS"
+      ],
+      "overall_confidence": 0.93
+    },
+    {
+      "full_name": "Jane Doe",
+      "primary_email": "jane.doe@example.com",
+      "phone": "+11234567890",
+      "skills": [
+        "JavaScript",
+        "Python",
+        "SQL",
+        "Product Management"
+      ],
+      "overall_confidence": 0.84
+    },
+    {
+      "full_name": "Charlie Brown",
+      "primary_email": "charlie.brown@example.com",
+      "phone": "+15559876543",
+      "skills": [
+        "Java",
+        "Rust",
+        "Distributed Systems",
+        "C++"
+      ],
+      "overall_confidence": 0.93
+    }
+  ],
+  "errors": []
+}

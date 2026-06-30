@@ -1,0 +1,11 @@
+Recruiter Interview Notes
+Candidate: Jane Doe
+Email: jane.doe@example.com
+Phone: +1 202 555 0143
+Location: Seattle, WA
+
+Jane is a sharp Product Manager currently working at Meta. She mentioned she has been there for about 2 years.
+Previously, she spent 3 years (from 2018-01 to 2020-12) at Twitter as a Senior Product Analyst.
+Her skills are highly aligned with product strategy, roadmap planning, SQL, and data analysis.
+She also has some background in Python and Javascript, and is looking for a role in Seattle.
+Profile Link: https://linkedin.com/in/janedoe-pm

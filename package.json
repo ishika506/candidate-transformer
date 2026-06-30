@@ -1,0 +1,15 @@
+{
+  "name": "candidate-transformer",
+  "version": "1.0.0",
+  "description": "Multi-Source Candidate Data Transformer",
+  "main": "src/engine/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/pipeline.test.js",
+    "cli": "node src/cli.js",
+    "dev": "node src/server.js"
+  },
+  "dependencies": {
+    "pdfkit": "^0.15.0"
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eightfold Candidate Transformer</title>
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Glowing background blobs -->
+  <div class="blob-container">
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-blue"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <span class="logo-text-gradient">Eightfold</span>
+        <span class="logo-subtext">Transformer</span>
+      </div>
+      <div class="header-desc">
+        <p>Convert messy, multi-source applicant data into one unified, canonical, trustworthy talent profile.</p>
+      </div>
+      <div class="header-actions">
+        <button id="btn-load-samples" class="btn btn-secondary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Load Sample Dataset
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Grid -->
+    <main class="app-grid">
+      <!-- Input Panel -->
+      <section class="panel glass-panel input-panel">
+        <div class="panel-header">
+          <h2>Input Sources</h2>
+          <span class="badge badge-info">Merge Sources</span>
+        </div>
+
+        <div class="source-tabs">
+          <button class="tab-btn active" data-source="csv">CSV Export</button>
+          <button class="tab-btn" data-source="ats">ATS JSON</button>
+          <button class="tab-btn" data-source="github">GitHub API</button>
+          <button class="tab-btn" data-source="notes">Recruiter Notes</button>
+        </div>
+
+        <div class="tab-content-container">
+          <!-- CSV Input -->
+          <div id="content-csv" class="tab-content active">
+            <label for="input-csv">Recruiter CSV Export (comma-separated):</label>
+            <textarea id="input-csv" placeholder="name,email,phone,current_company,title..." spellcheck="false"></textarea>
+          </div>
+
+          <!-- ATS JSON Input -->
+          <div id="content-ats" class="tab-content">
+            <label for="input-ats">ATS Profile JSON Blob:</label>
+            <textarea id="input-ats" placeholder="[ { ... } ]" spellcheck="false"></textarea>
+          </div>
+
+          <!-- GitHub JSON Input -->
+          <div id="content-github" class="tab-content">
+            <label for="input-github">GitHub Profile JSON Blob:</label>
+            <textarea id="input-github" placeholder="{ ... }" spellcheck="false"></textarea>
+          </div>
+
+          <!-- Recruiter Notes Input -->
+          <div id="content-notes" class="tab-content">
+            <label for="input-notes">Recruiter Free-Text Interview Notes:</label>
+            <textarea id="input-notes" placeholder="Candidate notes..." spellcheck="false"></textarea>
+          </div>
+        </div>
+
+        <!-- Custom Configuration Panel -->
+        <div class="config-section">
+          <div class="section-title">
+            <h3>Projection Configuration</h3>
+            <div class="config-presets">
+              <button class="preset-btn active" id="preset-custom">Custom Schema</button>
+              <button class="preset-btn" id="preset-minimal">Name & Skills Only</button>
+            </div>
+          </div>
+          <textarea id="input-config" placeholder="{ ... }" spellcheck="false"></textarea>
+        </div>
+
+        <div class="panel-footer">
+          <button id="btn-transform" class="btn btn-primary">
+            <span>Execute Pipeline</span>
+            <svg class="icon icon-spin hidden" id="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
+              <path d="M4 12a8 8 0 0 1 8-8V0C5.37 0 0 5.37 0 12h4z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Output Panel -->
+      <section class="panel glass-panel output-panel">
+        <div class="panel-header">
+          <h2>Transformation Output</h2>
+          <div class="output-tabs">
+            <button class="output-tab-btn active" data-output="canonical">Canonical Profiles</button>
+            <button class="output-tab-btn" data-output="projected">Projected JSON</button>
+            <button class="output-tab-btn" data-output="pipeline">Pipeline Steps</button>
+          </div>
+        </div>
+
+        <!-- Output Views -->
+        <div class="output-content-container">
+          <!-- Canonical Profiles View -->
+          <div id="output-canonical" class="output-tab-content active">
+            <div class="empty-state">
+              <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="11" y2="17"/></svg>
+              <p>Configure inputs and execute the pipeline to view resolved candidates.</p>
+            </div>
+            <div id="canonical-list" class="canonical-list hidden"></div>
+          </div>
+
+          <!-- Projected Output View -->
+          <div id="output-projected" class="output-tab-content">
+            <div class="empty-state">
+              <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <p>No projected profiles generated. Click Execute Pipeline with a custom config.</p>
+            </div>
+            <div id="projected-viewer" class="json-viewer-container hidden">
+              <div class="viewer-actions">
+                <button id="btn-copy-projected" class="btn-icon-text">Copy JSON</button>
+              </div>
+              <pre><code id="projected-code"></code></pre>
+            </div>
+          </div>
+
+          <!-- Pipeline Step Visualizer -->
+          <div id="output-pipeline" class="output-tab-content">
+            <div class="pipeline-visualizer">
+              <div class="pipeline-step" id="step-ingest">
+                <div class="step-num">1</div>
+                <div class="step-details">
+                  <h4>Ingest & Parse</h4>
+                  <p>Read raw Recruiter CSV, ATS JSON, GitHub profile, and Recruiter notes.</p>
+                  <span class="step-status">Pending execution</span>
+                </div>
+              </div>
+              <div class="pipeline-arrow"></div>
+              
+              <div class="pipeline-step" id="step-normalize">
+                <div class="step-num">2</div>
+                <div class="step-details">
+                  <h4>Normalize & Clean</h4>
+                  <p>Convert phone formats to E.164, standardize partial dates, resolve location codes, and canonicalize skills spellings.</p>
+                  <span class="step-status">Pending execution</span>
+                </div>
+              </div>
+              <div class="pipeline-arrow"></div>
+              
+              <div class="pipeline-step" id="step-merge">
+                <div class="step-num">3</div>
+                <div class="step-details">
+                  <h4>Deduplicate & Merge</h4>
+                  <p>Resolve identities using primary and secondary keys. Merge experience timelines and compute probabilistic skill confidence scores.</p>
+                  <span class="step-status">Pending execution</span>
+                </div>
+              </div>
+              <div class="pipeline-arrow"></div>
+              
+              <div class="pipeline-step" id="step-project">
+                <div class="step-num">4</div>
+                <div class="step-details">
+                  <h4>Dynamic Projection</h4>
+                  <p>Reshape output records based on custom runtime config. Remap paths and handle missing fields dynamically.</p>
+                  <span class="step-status">Pending execution</span>
+                </div>
+              </div>
+              <div class="pipeline-arrow"></div>
+
+              <div class="pipeline-step" id="step-validate">
+                <div class="step-num">5</div>
+                <div class="step-details">
+                  <h4>Validate Schema</h4>
+                  <p>Enforce data contract constraints for both the default profiles and custom projected results.</p>
+                  <span class="step-status">Pending execution</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Validation Warning / Error Log footer -->
+        <div id="validation-logs" class="validation-logs hidden">
+          <div class="logs-header">
+            <h4>Pipeline Logs & Validation Warnings</h4>
+          </div>
+          <ul id="logs-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer-bar">
+      <p>Eightfold Talent Acquisition Solutions. Powered by Google DeepMind Advanced Agentic Coding.</p>
+    </footer>
+  </div>
+  
+  <script src="app.js" type="module"></script>
+</body>
+</html>

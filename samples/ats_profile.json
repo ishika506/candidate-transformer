@@ -1,0 +1,43 @@
+[
+  {
+    "candidateName": "Bob Jones",
+    "contactInfo": {
+      "emailAddress": "bob.jones@example.com",
+      "mobileNumber": "+1 (555) 019-8111"
+    },
+    "history": [
+      {
+        "companyName": "Microsoft",
+        "roleTitle": "Senior Software Engineer II",
+        "startDate": "2022-01",
+        "endDate": null,
+        "description": "Led frontend architecture migrations."
+      },
+      {
+        "companyName": "Amazon",
+        "roleTitle": "Software Engineer",
+        "startDate": "2019-06",
+        "endDate": "2021-12",
+        "description": "Worked on AWS DynamoDB console."
+      }
+    ],
+    "skillsList": ["React", "TypeScript", "NodeJS", "AWS"]
+  },
+  {
+    "candidateName": "Charlie Brown",
+    "contactInfo": {
+      "emailAddress": "charlie.brown@example.com",
+      "mobileNumber": "555-987-6543"
+    },
+    "history": [
+      {
+        "companyName": "Netflix",
+        "roleTitle": "Staff Engineer",
+        "startDate": "2021-03",
+        "endDate": null,
+        "description": "High performance video rendering engines."
+      }
+    ],
+    "skillsList": ["Java", "Rust", "Distributed Systems", "C++"]
+  }
+]

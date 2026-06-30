@@ -1,0 +1,27 @@
+{
+  "login": "alicesmith",
+  "name": "Alice M. Smith",
+  "bio": "Frontend Engineer at Google. Passionate about React, CSS, and open-source. Coding in JavaScript and TypeScript.",
+  "blog": "https://alice.dev",
+  "location": "San Francisco, CA, USA",
+  "email": "alice.smith@example.com",
+  "html_url": "https://github.com/alicesmith",
+  "public_repos": 42,
+  "repos": [
+    {
+      "name": "react-perf-monitor",
+      "language": "TypeScript",
+      "stargazers_count": 120
+    },
+    {
+      "name": "dotfiles",
+      "language": "Shell",
+      "stargazers_count": 5
+    },
+    {
+      "name": "awesome-vanilla-js",
+      "language": "JavaScript",
+      "stargazers_count": 2300
+    }
+  ]
+}
