@@ -2,6 +2,14 @@
 
 A robust JavaScript pipeline that merges, normalizes, and filters applicant profiles from multiple structured (CSV, JSON) and unstructured (GitHub, recruiter text notes) sources, outputting unified talent profiles traceable to their original inputs.
 
+---
+
+## 🎥 Project Demo Video
+Watch the interactive web visualizer and pipeline execution in action here:
+👉 **[Watch the Loom Demo Video](https://www.loom.com/share/7d487a4e80e842158d069e5319117cdd)**
+
+---
+
 This project features:
 1. **Core Processing Engine**: Isomorphic pipeline logic (Parsers, Normalizers, Merger, Projector, Validator) running in both Node.js and modern Web browsers.
 2. **Interactive Web Dashboard**: A premium, dark-themed single-page visualizer built with Vanilla HTML/JS/CSS featuring real-time step-by-step pipeline animations, custom config previews, and error logs.
