@@ -6,8 +6,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configure names for output
-const candidateName = 'Candidate';
-const candidateEmail = 'candidate@eightfold.ai';
+const candidateName = 'Ishika';
+const candidateEmail = 'ishikajindaldav@gmail.com';
 const pdfFileName = `${candidateName}_${candidateEmail}_Eightfold.pdf`;
 const htmlFileName = `${candidateName}_${candidateEmail}_Eightfold.html`;
 const pdfPath = path.join(__dirname, '..', pdfFileName);
