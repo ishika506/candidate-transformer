@@ -6,7 +6,7 @@ A robust JavaScript pipeline that merges, normalizes, and filters applicant prof
 
 ## 🎥 Project Demo Video
 Watch the interactive web visualizer and pipeline execution in action here:
-👉 **[Watch the Loom Demo Video](https://www.loom.com/share/7d487a4e80e842158d069e5319117cdd)**
+👉 **[Watch the Loom Demo Video](https://www.loom.com/share/10bfe41b174d4be995ff3dc67502c11a)**
 
 ---
 
